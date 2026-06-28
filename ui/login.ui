@@ -61,7 +61,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Welcome back!</string>
+          <string>chào mừng quay lại</string>
          </property>
         </widget>
        </item>
@@ -138,7 +138,7 @@
           </font>
          </property>
          <property name="text">
-          <string>login</string>
+          <string>đăng nhập </string>
          </property>
         </widget>
        </item>
@@ -156,7 +156,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Register here!</string>
+          <string>Đăng ký tại đây!</string>
          </property>
         </widget>
        </item>

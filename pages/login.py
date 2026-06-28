@@ -1,40 +1,34 @@
 from PyQt6.QtWidgets import QMainWindow, QMessageBox
-import sys
 from PyQt6 import uic
-import os
-import re
 
-# mock data
-account = {"fullname": "duy", "email": "duydepzai@gmail.com", "password": "09082013"}
+from home import HomeWindow
+from singin import SigninWindow
 
 
-class LognupPage(QMainWindow):
-    def __init__(self, main_window, root_dir):
-        super().__init__()  # ke thua cac code init cua lop cha
-        self.main_window = main_window  # luu tham so
-        self.root_dir = root_dir
+class LoginWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("ui/login.ui", self)
 
-        # load file ui
-        ui_path = self.root_dir + "/GUI/loginup.ui"
-        uic.loadUi(ui_path, self)
+        self.pushButton.clicked.connect(self.login)
+        self.pushButton_2.clicked.connect(self.open_signin)
 
-        # bat su kien cho cac nut bam
-        # TODO
+    def login(self):
+        email = self.email.text()
+        password = self.password.text()
 
-        # chay app
-        self.show()
+        if email and password:
+            self.home = HomeWindow()
+            self.home.show()
+            self.close()
+        else:
+            QMessageBox.warning(
+                self,
+                "Lỗi",
+                "Vui lòng nhập đầy đủ thông tin!"
+            )
 
-    # ------------------ xu ly su kien ------------------
-    # TODO
-    # ------------------ ham ho tro ------------------
-    def __show_message(self, message):
-        # Khởi tạo hộp thoại thông báo
-        msg = QMessageBox()
-        msg.setWindowTitle("Thông báo")
-        msg.setText(message)
-        msg.setIcon(
-            QMessageBox.Icon.Information
-        )  # Các icon mặc định: Information, Warning, Critical, Question
-        msg.setStandardButtons(QMessageBox.StandardButton.Ok)  # Nút bấm OK
-        # Hiển thị hộp thoại
-        msg.exec()
+    def open_signin(self):
+        self.signin = SigninWindow()
+        self.signin.show()
+        self.close()

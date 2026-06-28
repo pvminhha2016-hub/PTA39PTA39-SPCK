@@ -67,7 +67,7 @@
           </font>
          </property>
          <property name="text">
-          <string>             signup</string>
+          <string>đăng kí</string>
          </property>
         </widget>
        </item>
@@ -109,7 +109,7 @@
           </font>
          </property>
          <property name="text">
-          <string>password</string>
+          <string>mật khẩu</string>
          </property>
         </widget>
        </item>
@@ -133,60 +133,6 @@
          </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="font">
-          <font>
-           <pointsize>13</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>your business information</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>     Your business is</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_6">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>    What do you want to manage?</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_2">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
          </property>
         </widget>
        </item>

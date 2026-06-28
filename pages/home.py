@@ -1,38 +1,69 @@
-from PyQt6.QtWidgets import QMainWindow, QMessageBox
-import sys
+from PyQt6.QtWidgets import QMainWindow, QListWidget, QListWidgetItem, QInputDialog
 from PyQt6 import uic
-import os
-import re
+from PyQt6.QtCore import Qt
+from datetime import datetime
 
 
-class HomePage(QMainWindow):
-    def __init__(self, main_window, root_dir, cur_acc):
+class HomeWindow(QMainWindow):
+    def __init__(self):
         super().__init__()
-        self.main_window = main_window
-        self.root_dir = root_dir
-        self.cur_acc = cur_acc
 
-        # load file ui
-        ui_path = self.root_dir + "/GUI/home.ui"
-        uic.loadUi(ui_path, self)
+        # =========================
+        # LOAD UI GỐC (KHÔNG SỬA UI)
+        # =========================
+        uic.loadUi("ui/home.ui", self)
 
-        # bat su kien cho cac nut bam
-        # TODO
+        # =========================
+        # TẠO LIST CHI PHÍ BẰNG CODE
+        # =========================
+        self.list_chi_phi = QListWidget(self)
 
-        # hien thi giao dien
-        self.show()
+        # đặt vị trí giống listWidget bên cạnh
+        self.list_chi_phi.setGeometry(300, 10, 256, 192)
 
-    # ------------------ xu ly su kien ------------------
-    # TODO
-    # ------------------ ham ho tro ------------------
-    def __show_message(self, message):
-        # Khởi tạo hộp thoại thông báo
-        msg = QMessageBox()
-        msg.setWindowTitle("Thông báo")
-        msg.setText(message)
-        msg.setIcon(
-            QMessageBox.Icon.Information
-        )  # Các icon mặc định: Information, Warning, Critical, Question
-        msg.setStandardButtons(QMessageBox.StandardButton.Ok)  # Nút bấm OK
-        # Hiển thị hộp thoại
-        msg.exec()
+        # thêm vào giao diện
+        self.list_chi_phi.show()
+
+        # =========================
+        # CONNECT BUTTON
+        # =========================
+        self.doanh_thu.clicked.connect(self.add_doanh_thu)
+        self.chi_phi.clicked.connect(self.add_chi_phi)
+
+    # =========================
+    # LẤY THỜI GIAN
+    # =========================
+    def get_time(self):
+        return datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    # =========================
+    # DOANH THU
+    # =========================
+    def add_doanh_thu(self):
+        value, ok = QInputDialog.getText(
+            self,
+            "Doanh thu",
+            "Nhập số tiền thu:"
+        )
+
+        if ok and value:
+            time = self.get_time()
+            text = f"[{time}] Thu: {value} VND"
+
+            self.listWidget.addItem(QListWidgetItem(text))
+
+    # =========================
+    # CHI PHÍ
+    # =========================
+    def add_chi_phi(self):
+        value, ok = QInputDialog.getText(
+            self,
+            "Chi phí",
+            "Nhập số tiền chi:"
+        )
+
+        if ok and value:
+            time = self.get_time()
+            text = f"[{time}] Chi: {value} VND"
+
+            self.list_chi_phi.addItem(QListWidgetItem(text))

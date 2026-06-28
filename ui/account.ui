@@ -6,14 +6,154 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>807</width>
     <height>600</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background : #4BB8FA</string>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>93</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white</string>
+     </property>
+     <property name="text">
+      <string>home</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../home.png</normaloff>../home.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>550</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white</string>
+     </property>
+     <property name="text">
+      <string>đăng xuất</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../dangxat.png</normaloff>../dangxat.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>350</y>
+       <width>611</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>280</y>
+       <width>441</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Vui lòng mô tả thông tin của bạn.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="email">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>110</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>30</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../hinhhavata.png</normaloff>../hinhhavata.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>90</width>
+       <height>90</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -23,7 +23,23 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
-            <widget class="QWidget" name="page"/>
+            <widget class="QWidget" name="page">
+             <widget class="QListWidget" name="listWidget">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>10</y>
+                <width>256</width>
+                <height>192</height>
+               </rect>
+              </property>
+              <item>
+               <property name="text">
+                <string>ngày dd/mm/yyyy</string>
+               </property>
+              </item>
+             </widget>
+            </widget>
             <widget class="QWidget" name="page_2"/>
            </widget>
           </item>
@@ -35,11 +51,11 @@
               <height>0</height>
              </size>
             </property>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="doanh_thu">
              <property name="geometry">
               <rect>
-               <x>10</x>
-               <y>10</y>
+               <x>20</x>
+               <y>20</y>
                <width>141</width>
                <height>91</height>
               </rect>
@@ -53,7 +69,7 @@
               <string notr="true">background: #89D7B7</string>
              </property>
              <property name="text">
-              <string>revenue</string>
+              <string>doanh thu</string>
              </property>
              <property name="icon">
               <iconset>
@@ -66,7 +82,7 @@
               </size>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="chi_phi">
              <property name="geometry">
               <rect>
                <x>180</x>
@@ -84,7 +100,7 @@
               <string notr="true">background-color: #FF7D7D</string>
              </property>
              <property name="text">
-              <string>expense</string>
+              <string>chi phí</string>
              </property>
              <property name="icon">
               <iconset>
@@ -97,13 +113,13 @@
               </size>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="them_thong_tin">
              <property name="geometry">
               <rect>
-               <x>180</x>
-               <y>220</y>
+               <x>190</x>
+               <y>200</y>
                <width>151</width>
-               <height>91</height>
+               <height>61</height>
               </rect>
              </property>
              <property name="font">
@@ -112,16 +128,16 @@
               </font>
              </property>
              <property name="text">
-              <string>Update information</string>
+              <string>thêm thông tin</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="trung_binh_cua_thang">
              <property name="geometry">
               <rect>
                <x>10</x>
                <y>130</y>
-               <width>141</width>
-               <height>81</height>
+               <width>311</width>
+               <height>61</height>
               </rect>
              </property>
              <property name="font">
@@ -130,42 +146,14 @@
               </font>
              </property>
              <property name="text">
-              <string>average</string>
+              <string>trung bình của tháng</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_6">
-             <property name="geometry">
-              <rect>
-               <x>180</x>
-               <y>120</y>
-               <width>151</width>
-               <height>81</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>tax</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>../thue.png</normaloff>../thue.png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>40</width>
-               <height>40</height>
-              </size>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="tai_kboan_cua_ban">
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>240</y>
+               <y>200</y>
                <width>161</width>
                <height>61</height>
               </rect>
@@ -176,7 +164,7 @@
               </font>
              </property>
              <property name="text">
-              <string>your accout</string>
+              <string>tài khoàn của bạn</string>
              </property>
              <property name="icon">
               <iconset>
@@ -189,11 +177,11 @@
               </size>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_7">
+            <widget class="QPushButton" name="tim_kiem">
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>310</y>
+               <y>270</y>
                <width>161</width>
                <height>71</height>
               </rect>
@@ -204,7 +192,7 @@
               </font>
              </property>
              <property name="text">
-              <string>search</string>
+              <string>tìm khiếm</string>
              </property>
              <property name="icon">
               <iconset>
